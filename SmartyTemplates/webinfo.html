@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../jquery-1.10.2.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/moments.js"></script>
+<script>
+$(document).ready(showTime());
+function showTime(){
+	var timeObj = moment();
+	timeObj.lang('{{$countryCode}}');
+	$("#divTime").html(timeObj.format('LL a h:mm:ss'));
+	setTimeout("showTime()", 500);
+}
+</script>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+<title>Web Info</title>
+</head>
+<body>
+	<div id="divTime"></div>
+	<div>{{$counterInfo1}}<img src="../counter.php" width="100px"/>{{$counterInfo2}}</div>
+</body>
+</html>

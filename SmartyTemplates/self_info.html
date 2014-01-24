@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../jquery-1.10.2.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+<title>自我介绍</title>
+</head>
+<body>
+<div class="container">
+	<table class="table table-condensed table-hover">
+		<thead><th>交友信息</th></thead>
+		<th>基本信息</th>	
+		<tbody>
+			<tr><td>照片</td><td><image src={{$profile}}></image></td></tr>
+			<tr><td>性别</td><td>{{$sex}}</td></tr>
+			<tr><td>身高</td><td>{{$height}}</td></tr>
+			<tr><td>体重</td><td>{{$width}}</td></tr>
+			<tr><td>年龄</td><td>{{$age}}</td></tr>
+			<tr><td>学历</td><td>{{$degree}}</td></tr>
+			<tr><td>家庭情况</td><td>{{$familySituation}}</td></tr>		
+		<th>爸妈期望</th>
+			<tr><td colspan="2">{{$parentsExp}}</td></tr>
+		<th>我的期望</th>
+			<tr><td colspan="2">{{$myExp}}</td></tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
